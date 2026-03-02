@@ -129,10 +129,17 @@
                     </div>
                     <div class="about-right">
                         <p class="about-text gs-reveal">
-                            I am a <span class="accent-text">UI/UX Designer</span> with 1.5+ years of experience
-                            creating intuitive, user-centered interfaces. Skilled in wireframing, prototyping, and
-                            design systems, with a strong eye for detail and a passion for delivering clean, functional,
-                            and visually engaging digital experiences.
+                            I am a <span class="accent-text">UI/UX &amp; Product Designer</span> with 1.5+ years of
+                            experience crafting digital products that balance beauty with absolute functionality. My
+                            design philosophy is simple: <span class="text-white">Empathy over aesthetics.</span> I
+                            believe the best solutions are born from understanding the user’s heartbeat before drawing a
+                            single pixel.
+                        </p>
+                        <p class="about-text gs-reveal mt-5" style="opacity: 0.8; font-size: 1.1rem;">
+                            With a background in Advanced Design &amp; Technology, I specialize in translating complex
+                            business goals into intuitive, human-centered interfaces. Beyond the canvas, I’m a curious
+                            explorer of human behavior and a firm believer that great design should feel like a natural
+                            extension of ourselves—invisible, yet indispensable.
                         </p>
 
                         <div class="education-block gs-reveal">
@@ -215,9 +222,716 @@
                     <!-- Code is kept here but no images are supplied -->
                     <div class="hover-image-reveal"></div>
 
-                    <!-- Project 1: CSAT.ai -->
-                    <a href="https://www.csat.ai/" target="_blank" class="project-item link-hover gs-reveal">
+                    <!-- Project 1: Quicktest.diy (Expandable Case Study) -->
+                    <div class="project-item project-accordion gs-reveal" id="quicktest-accordion">
                         <div class="proj-index">01</div>
+                        <div class="proj-info">
+                            <h3>Quicktest.diy</h3>
+                            <p>Smart quiz creation &amp; testing platform</p>
+                        </div>
+                        <div class="proj-category">Product Design</div>
+                        <div class="accordion-toggle-btn action-btn link-hover" id="quicktest-toggle"
+                            aria-expanded="false" aria-controls="quicktest-panel" data-cursor-text="View Details">
+                            <span class="btn-text">Expand</span>
+                            <div class="btn-icon"><i class="fa-solid fa-plus accordion-icon"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Expandable Case Study Panel for Quicktest.diy -->
+                    <div class="case-study-panel" id="quicktest-panel" aria-hidden="true">
+                        <div class="case-study-inner">
+
+                            <!-- Tab Navigation -->
+                            <nav class="cs-tabs" role="tablist">
+                                <button class="cs-tab active" data-tab="overview">Overview</button>
+                                <button class="cs-tab" data-tab="problem">Problem</button>
+                                <button class="cs-tab" data-tab="research">Research</button>
+                                <button class="cs-tab" data-tab="process">Design Process</button>
+                                <button class="cs-tab" data-tab="solution">Key Features</button>
+                                <button class="cs-tab" data-tab="highlights">Highlights</button>
+                                <button class="cs-tab" data-tab="impact">Impact</button>
+                                <button class="cs-tab" data-tab="learnings">Learnings</button>
+                            </nav>
+
+                            <!-- Tab Content -->
+                            <div class="cs-content">
+
+                                <!-- Overview -->
+                                <div class="cs-pane active" id="cs-overview" role="tabpanel">
+                                    <div class="cs-pane-grid">
+                                        <div class="cs-main-info">
+                                            <h4 class="cs-pane-title">Quicktest.diy – Smart Quiz Creation</h4>
+                                            <p class="cs-pane-text">Quicktest.diy is a smart, user-friendly quiz
+                                                creation and assessment platform designed for educators, students, and
+                                                trainers. The platform simplifies the entire quiz workflow — from
+                                                creating questions to evaluating results — making assessments faster,
+                                                engaging, and more efficient.</p>
+                                            <div class="cs-tags">
+                                                <span class="cs-tag">Smart Platform</span>
+                                                <span class="cs-tag">Assessment Tool</span>
+                                                <span class="cs-tag">UI/UX Design</span>
+                                                <span class="cs-tag">Education</span>
+                                            </div>
+                                        </div>
+                                        <div class="cs-meta-sidebar">
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">My Role</span>
+                                                <span class="cs-meta-value">UI/UX &amp; Product Designer</span>
+                                            </div>
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">Platforms</span>
+                                                <span class="cs-meta-value">Web &amp; Mobile Responsive</span>
+                                            </div>
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">Live Site</span>
+                                                <a href="https://quicktest.diy/" target="_blank"
+                                                    class="cs-meta-link">Visit Site <i
+                                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Problem -->
+                                <div class="cs-pane" id="cs-problem" role="tabpanel">
+                                    <h4 class="cs-pane-title">The Challenge</h4>
+                                    <p class="cs-pane-text">Educators and trainers faced several critical challenges
+                                        that needed an intelligent solution:</p>
+                                    <ul class="cs-list">
+                                        <li>Creating quizzes was time-consuming and repetitive.</li>
+                                        <li>Managing legacy question banks lacked proper structure.</li>
+                                        <li>Manual evaluation of student work consumed excessive effort.</li>
+                                        <li>Limited analytics made performance tracking difficult.</li>
+                                        <li>Poor user experience in existing assessment tools.</li>
+                                        <li>Students lacked instant feedback and meaningful insights.</li>
+                                    </ul>
+                                    <div class="cs-outcome">
+                                        <p><strong>Opportunity:</strong> Create a simple, intuitive, and intelligent
+                                            quiz platform that streamlines the entire assessment process.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Research -->
+                                <div class="cs-pane" id="cs-research" role="tabpanel">
+                                    <h4 class="cs-pane-title">Research &amp; Key Insights</h4>
+                                    <div class="cs-research-grid">
+                                        <div class="cs-research-item">
+                                            <h5>Target Users</h5>
+                                            <p>School/college educators, corporate trainers, online course creators, and
+                                                students preparing for exams.</p>
+                                        </div>
+                                        <div class="cs-research-item">
+                                            <h5>User Needs</h5>
+                                            <p>Users prioritized speed in quiz creation, auto-evaluation, instant
+                                                feedback, and clean, clutter-free user flows.</p>
+                                        </div>
+                                    </div>
+                                    <div class="cs-insight-box">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                        <p>Clean, minimal, workflow-driven experiences reduce friction and significantly
+                                            enhance platform usability.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Design Process -->
+                                <div class="cs-pane" id="cs-process" role="tabpanel">
+                                    <h4 class="cs-pane-title">Design Process</h4>
+                                    <div class="cs-process-steps">
+                                        <div class="cs-step">
+                                            <span class="step-num">01.</span>
+                                            <div class="step-desc">
+                                                <h5>User Flow Planning</h5>
+                                                <p>Designed a simplified workflow: Create Quiz → Add Questions →
+                                                    Configure → Publish → Track Results.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-step">
+                                            <span class="step-num">02.</span>
+                                            <div class="step-desc">
+                                                <h5>Wireframing</h5>
+                                                <p>Sketched low-fidelity layouts for the question builder and dashboard
+                                                    to ensure clear hierarchy and CTA visibility.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-step">
+                                            <span class="step-num">03.</span>
+                                            <div class="step-desc">
+                                                <h5>UI Design</h5>
+                                                <p>Developed a dashboard-style interface with a card-based question
+                                                    builder and clear data visualizations.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Key Features -->
+                                <div class="cs-pane" id="cs-solution" role="tabpanel">
+                                    <h4 class="cs-pane-title">Core Features</h4>
+                                    <div class="cs-features-grid">
+                                        <div class="cs-feature">
+                                            <h5>Smart Quiz Builder</h5>
+                                            <p>Support for MCQs, True/False, and Short Answer with easy editing,
+                                                duplication, and management.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Performance Analytics</h5>
+                                            <p>Visual charts for score tracking, accuracy percentages, and detailed
+                                                attempt histories per student.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Auto Evaluation</h5>
+                                            <p>Instant scoring and automated result generation for immediate learner
+                                                feedback loops.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Responsive Design</h5>
+                                            <p>Fully optimized interface ensuring a consistent experience across desktop
+                                                and mobile devices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Design Highlights -->
+                                <div class="cs-pane" id="cs-highlights" role="tabpanel">
+                                    <h4 class="cs-pane-title">Design Highlights</h4>
+                                    <p class="cs-pane-text">The design system prioritizes clarity and efficiency for a
+                                        professional assessment environment.</p>
+                                    <ul class="cs-list">
+                                        <li><strong>Minimal UI:</strong> Focused and distraction-free environment for
+                                            creators and learners.</li>
+                                        <li><strong>Visual Hierarchy:</strong> Strong use of typography and color to
+                                            guide users through tasks.</li>
+                                        <li><strong>Data Visualization:</strong> Intuitive charts that make complex
+                                            results instantly readable.</li>
+                                        <li><strong>Structured Spacing:</strong> Consistent use of soft shadows and
+                                            margins to organize content.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Impact -->
+                                <div class="cs-pane" id="cs-impact" role="tabpanel">
+                                    <h4 class="cs-pane-title">Impact &amp; Results</h4>
+                                    <ul class="cs-impact-list">
+                                        <li>Significant reduction in quiz creation time for educators.</li>
+                                        <li>Improved teacher productivity through automated grading tools.</li>
+                                        <li>Enhanced student engagement through instant result availability.</li>
+                                        <li>Simplified result analysis for high-level performance tracking.</li>
+                                        <li>Improved usability and task completion rate across the platform.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Learnings -->
+                                <div class="cs-pane" id="cs-learnings" role="tabpanel">
+                                    <h4 class="cs-pane-title">What I Learned</h4>
+                                    <div class="cs-research-grid">
+                                        <div class="cs-research-item">
+                                            <h5>Workflow Optimization</h5>
+                                            <p>The importance of reducing clicks and simplifying complex multi-step
+                                                processes for better UX.</p>
+                                        </div>
+                                        <div class="cs-research-item">
+                                            <h5>User Balancing</h5>
+                                            <p>Designing effectively for two distinct user types: the quiz creator and
+                                                the end learner.</p>
+                                        </div>
+                                    </div>
+                                    <div class="cs-insight-box">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                        <p>Balancing high functionality with a minimal UI is key to making data-heavy
+                                            platforms truly readable and intuitive.</p>
+                                    </div>
+                                </div>
+
+                            </div><!-- end cs-content -->
+                        </div><!-- end cs-inner -->
+                    </div><!-- end case-study-panel -->
+
+
+                    <!-- Project 2: Quizzer.ai (Expandable Case Study) -->
+                    <div class="project-item project-accordion gs-reveal" id="quizzer-accordion">
+                        <div class="proj-index">02</div>
+                        <div class="proj-info">
+                            <h3>Quizzer.ai</h3>
+                            <p>AI-powered quiz and assessment platform</p>
+                        </div>
+                        <div class="proj-category">Product Design</div>
+                        <div class="accordion-toggle-btn action-btn link-hover" id="quizzer-toggle"
+                            aria-expanded="false" aria-controls="quizzer-panel" data-cursor-text="Explore Project">
+                            <span class="btn-text">Expand</span>
+                            <div class="btn-icon"><i class="fa-solid fa-plus accordion-icon"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Expandable Case Study Panel for Quizzer.ai -->
+                    <div class="case-study-panel" id="quizzer-panel" aria-hidden="true">
+                        <div class="case-study-inner">
+
+                            <!-- Tab Navigation -->
+                            <nav class="cs-tabs" role="tablist">
+                                <button class="cs-tab active" data-tab="q-overview">Overview</button>
+                                <button class="cs-tab" data-tab="q-problem">Problem</button>
+                                <button class="cs-tab" data-tab="q-research">Research</button>
+                                <button class="cs-tab" data-tab="q-process">Design Process</button>
+                                <button class="cs-tab" data-tab="q-features">Features</button>
+                                <button class="cs-tab" data-tab="q-screens">UI Screens</button>
+                                <button class="cs-tab" data-tab="q-impact">Impact</button>
+                                <button class="cs-tab" data-tab="q-learnings">Learnings</button>
+                            </nav>
+
+                            <!-- Tab Content -->
+                            <div class="cs-content">
+
+                                <!-- Overview -->
+                                <div class="cs-pane active" id="cs-q-overview" role="tabpanel">
+                                    <div class="cs-pane-grid">
+                                        <div class="cs-main-info">
+                                            <h4 class="cs-pane-title">Quizzer.ai – Smart Assessment</h4>
+                                            <p class="cs-pane-text">Quizzer.ai is an AI-powered learning and assessment
+                                                platform that automatically generates quizzes, evaluates responses, and
+                                                provides personalized insights to improve knowledge retention and
+                                                performance.</p>
+                                            <div class="cs-tags">
+                                                <span class="cs-tag">AI-Powered</span>
+                                                <span class="cs-tag">Adaptive Learning</span>
+                                                <span class="cs-tag">Product Design</span>
+                                                <span class="cs-tag">UI/UX</span>
+                                            </div>
+                                        </div>
+                                        <div class="cs-meta-sidebar">
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">My Role</span>
+                                                <span class="cs-meta-value">UI/UX &amp; Product Designer</span>
+                                            </div>
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">Focus</span>
+                                                <span class="cs-meta-value">End-to-end Experience</span>
+                                            </div>
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">Live Site</span>
+                                                <a href="https://quizzer.ai/" target="_blank" class="cs-meta-link">Visit
+                                                    Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Problem -->
+                                <div class="cs-pane" id="cs-q-problem" role="tabpanel">
+                                    <h4 class="cs-pane-title">The Challenge</h4>
+                                    <p class="cs-pane-text">Traditional quiz platforms faced limitations that hindered
+                                        both educators and learners:</p>
+                                    <ul class="cs-list">
+                                        <li>Manual question creation was time-consuming and repetitive.</li>
+                                        <li>No personalization based on individual user performance.</li>
+                                        <li>Limited feedback beyond simple score displays.</li>
+                                        <li>Lack of adaptive difficulty levels to challenge students appropriately.</li>
+                                        <li>Weak data insights for educators to track learning gaps.</li>
+                                        <li>Static and non-engaging overall learning experience.</li>
+                                    </ul>
+                                    <div class="cs-outcome">
+                                        <p><strong>The Goal:</strong> Create a smart, adaptive assessment experience
+                                            that goes beyond traditional quizzes by using AI to enhance learning
+                                            outcomes.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Research -->
+                                <div class="cs-pane" id="cs-q-research" role="tabpanel">
+                                    <h4 class="cs-pane-title">Research &amp; Key Insights</h4>
+                                    <div class="cs-research-grid">
+                                        <div class="cs-research-item">
+                                            <h5>Target Users</h5>
+                                            <p>Online learners, Competitive exam aspirants, EdTech platforms, Course
+                                                creators, and Educational Institutions.</p>
+                                        </div>
+                                        <div class="cs-research-item">
+                                            <h5>User Pain Points</h5>
+                                            <p>Learners wanted quizzes tailored to their weak areas; teachers needed
+                                                quick assessment creation; students preferred instant, detailed
+                                                feedback.</p>
+                                        </div>
+                                    </div>
+                                    <div class="cs-insight-box">
+                                        <i class="fa-solid fa-brain"></i>
+                                        <p>Key Opportunity: Design a platform that generates quizzes using AI, adapts
+                                            difficulty based on performance, and provides personalized learning
+                                            insights.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Design Process -->
+                                <div class="cs-pane" id="cs-q-process" role="tabpanel">
+                                    <h4 class="cs-pane-title">Design Process</h4>
+                                    <div class="cs-process-steps">
+                                        <div class="cs-step">
+                                            <span class="step-num">01.</span>
+                                            <div class="step-desc">
+                                                <h5>User Journey Mapping</h5>
+                                                <p>Designed two major flows: For Educators (Create → AI Generate →
+                                                    Review → Publish) and Learners (Select → Attempt → AI Evaluation →
+                                                    Insights).</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-step">
+                                            <span class="step-num">02.</span>
+                                            <div class="step-desc">
+                                                <h5>Wireframing</h5>
+                                                <p>Created low &amp; mid-fidelity wireframes for the AI generation
+                                                    screen, adaptive quiz player, and results/insights dashboard focused
+                                                    on AI transparency.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-step">
+                                            <span class="step-num">03.</span>
+                                            <div class="step-desc">
+                                                <h5>UI Design</h5>
+                                                <p>Developed a clean, modern AI-focused interface with minimal layouts,
+                                                    strong hierarchy, and progress tracking visuals for a
+                                                    distraction-free experience.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Features -->
+                                <div class="cs-pane" id="cs-q-features" role="tabpanel">
+                                    <h4 class="cs-pane-title">Core Features</h4>
+                                    <div class="cs-features-grid">
+                                        <div class="cs-feature">
+                                            <h5>AI Quiz Generation</h5>
+                                            <p>Topic-based structured questions across multiple formats (MCQ, Short
+                                                Answer, T/F), editable before publishing.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Personalized Insights</h5>
+                                            <p>Strength/weakness analysis, topic-wise breakdown, and personalized
+                                                improvement suggestions.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Adaptive Difficulty</h5>
+                                            <p>Real-time question adjustment based on user accuracy to encourage
+                                                continuous learning.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Instant Evaluation</h5>
+                                            <p>Automated scoring coupled with AI-based feedback suggestions for
+                                                immediate learning loops.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- UI Screens / Design Highlights -->
+                                <div class="cs-pane" id="cs-q-screens" role="tabpanel">
+                                    <h4 class="cs-pane-title">Design Highlights</h4>
+                                    <p class="cs-pane-text">The visual identity focuses on transparency and
+                                        intelligence, using soft elements to represent AI-driven guidance.</p>
+                                    <ul class="cs-list">
+                                        <li><strong>AI-First Visual Identity:</strong> Clean, modern interface with soft
+                                            gradients indicating AI intelligence.</li>
+                                        <li><strong>Insight-Driven Dashboard:</strong> Readable metrics via insight
+                                            cards and data visualization for clarity.</li>
+                                        <li><strong>Minimal Distractions:</strong> Layout designed to keep the focus on
+                                            learning content.</li>
+                                        <li><strong>Responsive Interface:</strong> Fully optimized for seamless
+                                            switching between desktop and mobile devices.</li>
+                                        <li><strong>Clear CTAs:</strong> Structured hierarchy to guide users through the
+                                            assessment workflow.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Impact -->
+                                <div class="cs-pane" id="cs-q-impact" role="tabpanel">
+                                    <h4 class="cs-pane-title">Impact &amp; Results</h4>
+                                    <ul class="cs-impact-list">
+                                        <li>Reduced quiz creation effort significantly for educators.</li>
+                                        <li>Improved learner engagement through interactive and adaptive flows.</li>
+                                        <li>Increased knowledge retention with personalized feedback loops.</li>
+                                        <li>Better visibility of performance trends for institutions.</li>
+                                        <li>Faster feedback cycle, enabling more frequent assessments.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Learnings -->
+                                <div class="cs-pane" id="cs-q-learnings" role="tabpanel">
+                                    <h4 class="cs-pane-title">Key Learnings</h4>
+                                    <div class="cs-research-grid">
+                                        <div class="cs-research-item">
+                                            <h5>AI Transparency</h5>
+                                            <p>Designing for AI transparency builds user trust and encourages them to
+                                                use automated features more frequently.</p>
+                                        </div>
+                                        <div class="cs-research-item">
+                                            <h5>Data Presentation</h5>
+                                            <p>Clean data presentation is critical for learning platforms to ensure
+                                                users aren't overwhelmed by metrics.</p>
+                                        </div>
+                                    </div>
+                                    <div class="cs-insight-box">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                        <p>Adaptive systems require clear feedback loops to keep learners motivated and
+                                            aware of their progress.</p>
+                                    </div>
+                                </div>
+
+                            </div><!-- end cs-content -->
+                        </div><!-- end cs-inner -->
+                    </div><!-- end case-study-panel -->
+
+
+                    <!-- Project 3: Coherence Services (Expandable Case Study) -->
+                    <div class="project-item project-accordion gs-reveal" id="coherence-accordion">
+                        <div class="proj-index">03</div>
+                        <div class="proj-info">
+                            <h3>Coherence.services</h3>
+                            <p>Bridging Education, Industry &amp; Humanity</p>
+                        </div>
+                        <div class="proj-category">UX/UI Design</div>
+                        <div class="accordion-toggle-btn action-btn link-hover" id="coherence-toggle"
+                            aria-expanded="false" aria-controls="coherence-panel" data-cursor-text="Explore Project">
+                            <span class="btn-text">Expand</span>
+                            <div class="btn-icon"><i class="fa-solid fa-plus accordion-icon"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Expandable Case Study Panel for Coherence -->
+                    <div class="case-study-panel" id="coherence-panel" aria-hidden="true">
+                        <div class="case-study-inner">
+
+                            <!-- Tab Navigation -->
+                            <nav class="cs-tabs" role="tablist">
+                                <button class="cs-tab active" data-tab="c-overview">Overview</button>
+                                <button class="cs-tab" data-tab="c-problem">Problem</button>
+                                <button class="cs-tab" data-tab="c-research">Research</button>
+                                <button class="cs-tab" data-tab="c-process">Design Process</button>
+                                <button class="cs-tab" data-tab="c-features">Features</button>
+                                <button class="cs-tab" data-tab="c-highlights">Highlights</button>
+                                <button class="cs-tab" data-tab="c-impact">Impact</button>
+                                <button class="cs-tab" data-tab="c-learnings">Learnings</button>
+                            </nav>
+
+                            <!-- Tab Content -->
+                            <div class="cs-content">
+
+                                <!-- Overview -->
+                                <div class="cs-pane active" id="cs-c-overview" role="tabpanel">
+                                    <div class="cs-pane-grid">
+                                        <div class="cs-main-info">
+                                            <h4 class="cs-pane-title">Coherence.services – Bridging Gaps</h4>
+                                            <p class="cs-pane-text">Coherence.services is a transformational platform
+                                                that connects education, industry, and individuals to foster clarity,
+                                                meaningful learning, real-world exposure, and collaborative growth. It’s
+                                                designed to create purposeful educational journeys and professional
+                                                development pathways that link curiosity with career clarity and impact.
+                                            </p>
+                                            <div class="cs-tags">
+                                                <span class="cs-tag">EdTech Bridge</span>
+                                                <span class="cs-tag">Industry Connect</span>
+                                                <span class="cs-tag">Product Architecture</span>
+                                                <span class="cs-tag">Strategic Design</span>
+                                            </div>
+                                        </div>
+                                        <div class="cs-meta-sidebar">
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">My Role</span>
+                                                <span class="cs-meta-value">UI/UX &amp; Product Designer</span>
+                                            </div>
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">Focus</span>
+                                                <span class="cs-meta-value">Platform Ecosystem</span>
+                                            </div>
+                                            <div class="cs-meta-row">
+                                                <span class="cs-meta-label">Live Site</span>
+                                                <a href="https://coherence.services/" target="_blank"
+                                                    class="cs-meta-link">Visit Site <i
+                                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Problem -->
+                                <div class="cs-pane" id="cs-c-problem" role="tabpanel">
+                                    <h4 class="cs-pane-title">The Challenge</h4>
+                                    <p class="cs-pane-text">Traditional learning and professional development systems
+                                        often lack meaningful connection between academics and real-world industry
+                                        needs. This leads to gaps in practical exposure, career misalignment, and a
+                                        disconnect between education and employment.</p>
+                                    <ul class="cs-list">
+                                        <li>Lack of meaningful connection between academia and industry.</li>
+                                        <li>No structured learning journeys with real practical exposure.</li>
+                                        <li>No clear pathways from curiosity to defined career goals.</li>
+                                        <li>Lack of inclusive programs for students, professionals, and startups.</li>
+                                        <li>Disconnected communities that hinder cross-sector collaboration.</li>
+                                        <li>The frustration of being stuck in theory without real-world application.
+                                        </li>
+                                    </ul>
+                                    <div class="cs-outcome">
+                                        <p><strong>Opportunity:</strong> Design a unified platform that helps users
+                                            evolve from curiosity → clarity → capability → impact.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Research -->
+                                <div class="cs-pane" id="cs-c-research" role="tabpanel">
+                                    <h4 class="cs-pane-title">Research &amp; Key Insights</h4>
+                                    <div class="cs-research-grid">
+                                        <div class="cs-research-item">
+                                            <h5>Target Users</h5>
+                                            <p>Students seeking exposure, Professionals wanting career growth, Startups
+                                                needing strategy, and Educators seeking relevance.</p>
+                                        </div>
+                                        <div class="cs-research-item">
+                                            <h5>Key Insights</h5>
+                                            <p>Users want experiential learning; students need industry-ready programs;
+                                                professionals need career transition clarity.</p>
+                                        </div>
+                                    </div>
+                                    <div class="cs-insight-box">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                        <p>Impact-driven education requires a journey that moves from academic curiosity
+                                            to professional capability.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Design Process -->
+                                <div class="cs-pane" id="cs-c-process" role="tabpanel">
+                                    <h4 class="cs-pane-title">Design Process</h4>
+                                    <div class="cs-process-steps">
+                                        <div class="cs-step">
+                                            <span class="step-num">01.</span>
+                                            <div class="step-desc">
+                                                <h5>Audience Mapping</h5>
+                                                <p>Defined distinct journeys for students (curiosity to clarity),
+                                                    professionals (skills and growth), and organizations (strategy and
+                                                    engagement).</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-step">
+                                            <span class="step-num">02.</span>
+                                            <div class="step-desc">
+                                                <h5>UX Architecture</h5>
+                                                <p>Structured the platform into core pathways: Journeys, Edge, Catalyst,
+                                                    and Blueprint, bolstered by trust indicators and ecosystem
+                                                    highlights.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-step">
+                                            <span class="step-num">03.</span>
+                                            <div class="step-desc">
+                                                <h5>UI Design</h5>
+                                                <p>Focused on a welcoming visual hierarchy, intuitive progression, and
+                                                    consistent imagery showing real human connection and transformation.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Features -->
+                                <div class="cs-pane" id="cs-c-features" role="tabpanel">
+                                    <h4 class="cs-pane-title">Core Features &amp; Pathways</h4>
+                                    <div class="cs-features-grid">
+                                        <div class="cs-feature">
+                                            <h5>Coherence Journeys</h5>
+                                            <p>Structured learning pathways designed to move users from education to
+                                                professional clarity.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Coherence Edge</h5>
+                                            <p>Skill unlocking and performance elevation programs for students and
+                                                professionals.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Coherence Catalyst</h5>
+                                            <p>A launchpad for turning innovative ideas into real-world projects and
+                                                impact.</p>
+                                        </div>
+                                        <div class="cs-feature">
+                                            <h5>Coherence Blueprint</h5>
+                                            <p>Deep insights and strategic roadmaps that drive organizational
+                                                transformation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Design Highlights -->
+                                <div class="cs-pane" id="cs-c-highlights" role="tabpanel">
+                                    <h4 class="cs-pane-title">Design Highlights</h4>
+                                    <p class="cs-pane-text">The visual direction focuses on trust, growth, and
+                                        professional excellence through a balanced UI.</p>
+                                    <ul class="cs-list">
+                                        <li><strong>Welcoming Hero Section:</strong> Clearly states the purpose of
+                                            "Building bridges..." to establish immediate mission.</li>
+                                        <li><strong>Visual Pathway Organization:</strong> Services organized beautifully
+                                            for intuitive user navigation.</li>
+                                        <li><strong>Trusted Partner Logos:</strong> Integrated showcase of partner
+                                            schools and corporations to build credibility.</li>
+                                        <li><strong>Clean Journey Layouts:</strong> Varied layouts tailored to the
+                                            unique goals of different user audiences.</li>
+                                        <li><strong>Engagement Points:</strong> Clear 'Get in Touch' prompts
+                                            strategically placed for program inquiries.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Impact -->
+                                <div class="cs-pane" id="cs-c-impact" role="tabpanel">
+                                    <h4 class="cs-pane-title">Impact &amp; Outcomes</h4>
+                                    <ul class="cs-impact-list">
+                                        <li>Established clear positioning as the bridge between education and industry.
+                                        </li>
+                                        <li>Significantly improved alignment between user expectations and platform
+                                            offerings.</li>
+                                        <li>Enhanced navigation flow for multiple personas (Students, Orgs,
+                                            Professionals).</li>
+                                        <li>Strong thematic consistency across disparate service categories and
+                                            pathways.</li>
+                                        <li>Improved user retention through more cohesive journey-based navigation.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Learnings -->
+                                <div class="cs-pane" id="cs-c-learnings" role="tabpanel">
+                                    <h4 class="cs-pane-title">What I Learned</h4>
+                                    <div class="cs-research-grid">
+                                        <div class="cs-research-item">
+                                            <h5>Multi-Persona Design</h5>
+                                            <p>Learned to design for multiple user types on one platform without losing
+                                                clarity or direction.</p>
+                                        </div>
+                                        <div class="cs-research-item">
+                                            <h5>Depth vs. Clarity</h5>
+                                            <p>How to present deep educational content while maintaining a simple and
+                                                inviting user interface.</p>
+                                        </div>
+                                    </div>
+                                    <div class="cs-insight-box">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                        <p>Creating modular design systems is critical to allow platforms to evolve and
+                                            grow with new service offerings over time.</p>
+                                    </div>
+                                </div>
+
+                            </div><!-- end cs-content -->
+                        </div><!-- end cs-inner -->
+                    </div><!-- end case-study-panel -->
+
+                    <!-- Project 4: Vcoders.ai -->
+                    <a href="https://vcoders.ai/" target="_blank" class="project-item link-hover gs-reveal">
+                        <div class="proj-index">04</div>
+                        <div class="proj-info">
+                            <h3>Vcoders.ai</h3>
+                            <p>AI-powered coding learning platform with gamified modules</p>
+                        </div>
+                        <div class="proj-category">UX/UI Design</div>
+                        <div class="action-btn">
+                            <span class="btn-text">View</span>
+                            <div class="btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </a>
+
+                    <!-- Project 5: CSAT.ai -->
+                    <a href="https://www.csat.ai/" target="_blank" class="project-item link-hover gs-reveal">
+                        <div class="proj-index">05</div>
                         <div class="proj-info">
                             <h3>CSAT.ai</h3>
                             <p>Proactive AI-driven customer service QA platform</p>
@@ -229,56 +943,14 @@
                         </div>
                     </a>
 
-                    <!-- Project 2: Coherence Services -->
-                    <a href="https://coherence.services/" target="_blank" class="project-item link-hover gs-reveal">
-                        <div class="proj-index">02</div>
+                    <!-- Project 6: The Sentinel Ark -->
+                    <a href="https://thesentinelark.com/" target="_blank" class="project-item link-hover gs-reveal">
+                        <div class="proj-index">06</div>
                         <div class="proj-info">
-                            <h3>Coherence.services</h3>
-                            <p>Strategic B2B digital transformation & software services</p>
+                            <h3>The Sentinel Ark</h3>
+                            <p>Smart IT solutions, web development &amp; digital security strategy</p>
                         </div>
-                        <div class="proj-category">UX/UI Design</div>
-                        <div class="action-btn">
-                            <span class="btn-text">View</span>
-                            <div class="btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                        </div>
-                    </a>
-
-                    <!-- Project 3: Quicktest.diy -->
-                    <a href="https://quicktest.diy/" target="_blank" class="project-item link-hover gs-reveal">
-                        <div class="proj-index">03</div>
-                        <div class="proj-info">
-                            <h3>Quicktest.diy</h3>
-                            <p>Smart quiz creation & testing platform</p>
-                        </div>
-                        <div class="proj-category">Product Design</div>
-                        <div class="action-btn">
-                            <span class="btn-text">View</span>
-                            <div class="btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                        </div>
-                    </a>
-
-                    <!-- Project 4: Quizzer.ai -->
-                    <a href="https://quizzer.ai/" target="_blank" class="project-item link-hover gs-reveal">
-                        <div class="proj-index">04</div>
-                        <div class="proj-info">
-                            <h3>Quizzer.ai</h3>
-                            <p>AI-powered quiz and assessment platform</p>
-                        </div>
-                        <div class="proj-category">Product Design</div>
-                        <div class="action-btn">
-                            <span class="btn-text">View</span>
-                            <div class="btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
-                        </div>
-                    </a>
-
-                    <!-- Project 5: Vcoders.ai -->
-                    <a href="https://vcoders.ai/" target="_blank" class="project-item link-hover gs-reveal">
-                        <div class="proj-index">05</div>
-                        <div class="proj-info">
-                            <h3>Vcoders.ai</h3>
-                            <p>AI-powered coding learning platform with gamified modules</p>
-                        </div>
-                        <div class="proj-category">UX/UI Design</div>
+                        <div class="proj-category">UI/UX Design</div>
                         <div class="action-btn">
                             <span class="btn-text">View</span>
                             <div class="btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
@@ -313,8 +985,6 @@
                             class="mega-email link-hover">nandhini.uiuxdesigner<br>@gmail.com</a>
 
                         <div class="contact-details mt-10">
-                            <p class="phone-num">Phone: <a href="tel:+919751759765" class="link-hover">+91
-                                    9751759765</a></p>
 
                             <div class="social-links mt-5">
                                 <a href="https://www.linkedin.com/in/nandhini-pugazhanthi-037198149/"

@@ -900,6 +900,322 @@ section {
 }
 
 /* =========================================================
+   CASE STUDY ACCORDION (Quicktest.diy)
+   ========================================================= */
+
+.project-accordion {
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+
+.project-accordion:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.project-accordion.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.case-study-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.case-study-panel.open {
+    max-height: 2500px;
+    /* Increased to accommodate content */
+}
+
+.case-study-inner {
+    padding: 3rem 0 5rem;
+}
+
+/* Tab Navigation */
+.cs-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.cs-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.cs-tab {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.6rem 1.5rem;
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cs-tab:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+.cs-tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg-main);
+}
+
+/* Tab Content Panes */
+.cs-pane {
+    display: none;
+    animation: fadeInSlide 0.5s ease forwards;
+}
+
+.cs-pane.active {
+    display: block;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cs-pane-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.cs-pane-text {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* Layout Helpers */
+.cs-pane-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 4rem;
+}
+
+.cs-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.cs-tag {
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.cs-meta-sidebar {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    height: fit-content;
+}
+
+.cs-meta-row {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cs-meta-row:last-child {
+    margin-bottom: 0;
+}
+
+.cs-meta-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.cs-meta-value {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.cs-meta-link {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 0.95rem;
+}
+
+/* Specific Content Styles */
+.cs-list {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.cs-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.cs-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.cs-outcome {
+    background: rgba(212, 255, 0, 0.05);
+    /* Soft accent bg */
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border-left: 4px solid var(--accent);
+    margin-top: 2.5rem;
+}
+
+.cs-impact-list {
+    list-style: none;
+}
+
+.cs-impact-list li {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    font-family: var(--font-heading);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.cs-impact-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.cs-research-grid,
+.cs-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.cs-research-item,
+.cs-feature {
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cs-research-item:hover,
+.cs-feature:hover {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.cs-research-item h5,
+.cs-feature h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    font-family: var(--font-heading);
+}
+
+.cs-research-item p,
+.cs-feature p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.cs-insight-box {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.cs-insight-box i {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.cs-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: flex-start;
+}
+
+.step-num {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--accent);
+    font-weight: 800;
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.step-desc h5 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+
+    .cs-pane-grid,
+    .cs-research-grid,
+    .cs-features-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .cs-pane-title {
+        font-size: 2rem;
+    }
+
+    .cs-meta-sidebar {
+        width: 100%;
+    }
+}
+
+/* =========================================================
    FOOTER
    ========================================================= */
 .footer {

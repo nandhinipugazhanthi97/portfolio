@@ -358,4 +358,75 @@ document.addEventListener('DOMContentLoaded', () => {
             lenis.scrollTo(0, { duration: 1.5, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
         });
     }
+
+    /* =========================================================
+       10. PROJECT ACCORDION & TABS (REUSABLE)
+       ========================================================= */
+    const initAccordion = (accordionId, panelId, toggleId) => {
+        const accordion = document.getElementById(accordionId);
+        const panel = document.getElementById(panelId);
+        const toggle = document.getElementById(toggleId);
+
+        if (accordion && panel) {
+            // Accordion Toggle Logic
+            accordion.addEventListener('click', (e) => {
+                const isOpen = panel.classList.contains('open');
+
+                if (isOpen) {
+                    panel.classList.remove('open');
+                    accordion.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    panel.setAttribute('aria-hidden', 'true');
+                    toggle.querySelector('.btn-text').textContent = 'Expand';
+                } else {
+                    panel.classList.add('open');
+                    accordion.classList.add('active');
+                    toggle.setAttribute('aria-expanded', 'true');
+                    panel.setAttribute('aria-hidden', 'false');
+                    toggle.querySelector('.btn-text').textContent = 'Collapse';
+
+                    // Scroll to accordion start
+                    setTimeout(() => {
+                        const offset = accordion.getBoundingClientRect().top + window.pageYOffset - 100;
+                        lenis.scrollTo(offset, { duration: 1.2 });
+                    }, 300);
+                }
+            });
+
+            // Tab Switching Logic
+            const tabs = panel.querySelectorAll('.cs-tab');
+            const panes = panel.querySelectorAll('.cs-pane');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Don't trigger accordion toggle
+
+                    const targetTab = tab.getAttribute('data-tab');
+
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // Update visible pane
+                    panes.forEach(pane => {
+                        pane.classList.remove('active');
+                        if (pane.id === `cs-${targetTab}`) {
+                            pane.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Prevent content clicks from toggling accordion
+            panel.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
+    };
+
+    // Initialize Case Studies
+    initAccordion('quicktest-accordion', 'quicktest-panel', 'quicktest-toggle');
+    initAccordion('quizzer-accordion', 'quizzer-panel', 'quizzer-toggle');
+    initAccordion('coherence-accordion', 'coherence-panel', 'coherence-toggle');
+
 });
