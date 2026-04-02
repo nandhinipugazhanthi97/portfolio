@@ -611,7 +611,7 @@ section {
     align-items: center;
     padding: 3rem 0;
     border-bottom: 1px solid var(--border);
-    transition: var(--transition);
+    transition: padding var(--transition), background var(--transition);
 }
 
 .exp-row:hover {
@@ -697,7 +697,7 @@ section {
     align-items: center;
     padding: 3rem 0;
     border-bottom: 1px solid var(--border);
-    transition: var(--transition);
+    transition: padding var(--transition), background var(--transition), opacity var(--transition); /* Allow opacity transition for hover but prevent transform jitter */
 }
 
 .project-item:hover {
@@ -764,14 +764,14 @@ section {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     font-weight: 600;
     text-transform: uppercase;
-    transition: var(--transition);
+    transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
     background: transparent;
 }
 
 .tool-circle:hover {
-    background: var(--text-main);
+    background: var(--accent);
     color: var(--bg-main);
-    border-color: var(--text-main);
+    border-color: var(--accent);
     transform: scale(1.05);
 }
 

@@ -194,44 +194,191 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* =========================================================
-       5. GSAP SCROLLTRIGGER ANIMATIONS
+       5. GSAP SCROLLTRIGGER ANIMATIONS (3D ENHANCED)
        ========================================================= */
     gsap.registerPlugin(ScrollTrigger);
 
-    // Fade/Slide Up general elements
-    const revealElements = document.querySelectorAll('.gs-reveal');
-    revealElements.forEach(el => {
-        gsap.fromTo(el,
-            { y: 50, opacity: 0 },
+    // 5.1 Hero Parallax Effect
+    gsap.to('.hero-content', {
+        yPercent: 30,
+        opacity: 0,
+        scale: 0.95,
+        rotationX: -5,
+        transformPerspective: 1000,
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1
+        }
+    });
+
+    gsap.to('.grid-pattern', {
+        yPercent: 15,
+        rotationZ: 2,
+        scale: 1.05,
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+    // 5.2 About Section 3D Reveal
+    const aboutSection = document.querySelector('.about');
+    if (aboutSection) {
+        gsap.fromTo('.about-right',
+            { opacity: 0, x: 50, rotationY: -10, z: -100, transformPerspective: 1000 },
             {
-                y: 0,
-                opacity: 1,
-                duration: 1,
+                opacity: 1, x: 0, rotationY: 0, z: 0,
+                duration: 1.5,
                 ease: "power3.out",
                 scrollTrigger: {
-                    trigger: el,
-                    start: "top 85%", // Trigger when top of element is 85% down viewport
-                    toggleActions: "play none none reverse"
+                    trigger: '.about',
+                    start: 'top 85%',
+                    end: 'top 30%',
+                    scrub: 1
+                }
+            }
+        );
+        gsap.fromTo('.about-left',
+            { opacity: 0, x: -30, rotationX: 10, transformPerspective: 800 },
+            {
+                opacity: 1, x: 0, rotationX: 0,
+                duration: 1.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: '.about',
+                    start: 'top 85%',
+                    end: 'top 30%',
+                    scrub: 1
+                }
+            }
+        );
+    }
+
+    // 5.3 3D Layers for Experience
+    const expRows = document.querySelectorAll('.exp-row');
+    expRows.forEach((row, i) => {
+        // Remove simple reveal class to prevent conflict
+        row.classList.remove('gs-reveal');
+        
+        gsap.fromTo(row,
+            { opacity: 0, y: 30, rotationX: 15, transformPerspective: 800 },
+            {
+                opacity: 1, y: 0, rotationX: 0,
+                duration: 1.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: row,
+                    start: "top 95%",
+                    end: "top 75%",
+                    scrub: 1
                 }
             }
         );
     });
 
-    // Stagger Tools Section
+    // 5.4 3D Projects Reveal
+    const projectElements = document.querySelectorAll('.project-item');
+    projectElements.forEach((item, i) => {
+        // Remove simple reveal class
+        item.classList.remove('gs-reveal');
+
+        gsap.fromTo(item,
+            { opacity: 0, y: 50, z: -50, rotationX: -10, scale: 0.95, transformPerspective: 1000 },
+            {
+                opacity: 1, y: 0, z: 0, rotationX: 0, scale: 1,
+                duration: 1.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 90%",
+                    end: "top 60%",
+                    scrub: 1
+                }
+            }
+        );
+    });
+
+    // 5.5 Stagger Tools Section with 3D Pop
     gsap.fromTo('.tool-circle',
-        { scale: 0.5, opacity: 0 },
+        { scale: 0.5, opacity: 0, rotationY: 90, z: -200, transformPerspective: 800 },
         {
-            scale: 1,
-            opacity: 1,
-            duration: 0.8,
-            stagger: 0.1,
+            scale: 1, opacity: 1, rotationY: 0, z: 0,
+            duration: 1.2,
+            stagger: 0.15,
             ease: "back.out(1.5)",
             scrollTrigger: {
                 trigger: '.tools-grid',
-                start: "top 80%"
+                start: "top 85%",
+                end: "top 50%",
+                scrub: 1 // smooth 3D entry
             }
         }
     );
+
+    // 5.6 Contact Section 3D Transform
+    const contactFormWrap = document.querySelector('.contact-form-wrap');
+    if (contactFormWrap) {
+        contactFormWrap.classList.remove('gs-reveal');
+        gsap.fromTo(contactFormWrap,
+            { rotationY: -15, scale: 0.9, opacity: 0, x: 50, transformPerspective: 1000 },
+            {
+                rotationY: 0, scale: 1, opacity: 1, x: 0,
+                duration: 1.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: '.contact',
+                    start: "top 85%",
+                    end: "top 40%",
+                    scrub: 1
+                }
+            }
+        );
+    }
+
+    const contactInfo = document.querySelector('.contact-info');
+    if (contactInfo) {
+        contactInfo.classList.remove('gs-reveal');
+        gsap.fromTo(contactInfo,
+            { rotationY: 15, opacity: 0, x: -50, transformPerspective: 1000 },
+            {
+                rotationY: 0, opacity: 1, x: 0,
+                duration: 1.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: '.contact',
+                    start: "top 85%",
+                    end: "top 40%",
+                    scrub: 1
+                }
+            }
+        );
+    }
+
+    // 5.7 Fallback/Slide Up general elements for any remaining gs-reveal
+    setTimeout(() => {
+        const remainingRevealElements = document.querySelectorAll('.gs-reveal');
+        remainingRevealElements.forEach(el => {
+            gsap.fromTo(el,
+                { y: 50, opacity: 0, rotationX: 10, transformPerspective: 800 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    rotationX: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+    }, 50); // Small delay to let other initializations remove gs-reveal classes
 
     /* =========================================================
        6. FLOATING PROJECT IMAGE REVEAL (GSAP)
