@@ -282,7 +282,7 @@ section {
 }
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -347,7 +347,7 @@ section {
 }
 
 .hero-title {
-    font-size: clamp(3rem, 9.5vw, 10.5rem);
+    font-size: clamp(2rem, 8vw, 8.5rem);
     line-height: 0.85;
     letter-spacing: -3px;
     text-transform: uppercase;
@@ -741,6 +741,107 @@ section {
     padding-right: 2rem;
     color: var(--text-muted);
     width: 25%;
+}
+
+/* =========================================================
+   BEHANCE CARDS SECTION
+   ========================================================= */
+.behance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.behance-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    position: relative;
+}
+
+.behance-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    background: rgba(212, 255, 0, 0.02);
+}
+
+.behance-card .proj-index {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.behance-card .proj-index i {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.behance-card .proj-info {
+    padding-right: 0;
+    margin-bottom: 3rem;
+}
+
+.behance-card .proj-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.behance-card .proj-info p {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.behance-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: auto;
+}
+
+.behance-card .proj-category {
+    font-size: 0.85rem;
+    width: auto;
+    padding-right: 0;
+}
+
+.behance-card .action-btn {
+    width: 50px;
+    height: 50px;
+}
+
+.behance-card .action-btn .btn-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.behance-card:hover .action-btn {
+    width: 140px;
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.behance-card:hover .action-btn .btn-text {
+    opacity: 1;
+    width: 65px;
+    padding-left: 15px;
+    font-size: 0.85rem;
+    color: var(--bg-main);
+}
+
+.behance-card:hover .action-btn .btn-icon {
+    color: var(--bg-main);
+}
+
+.behance-card:hover .action-btn .btn-icon i {
+    transform: rotate(0deg);
 }
 
 /* =========================================================
@@ -1248,6 +1349,21 @@ section {
    ========================================================= */
 @media (max-width: 1024px) {
 
+    .hero-container {
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .hero-content {
+        flex: none;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -1272,7 +1388,7 @@ section {
         width: auto;
     }
 
-    .action-btn {
+    .project-item .action-btn {
         margin-top: 1rem;
     }
 }
@@ -1280,6 +1396,19 @@ section {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+    }
+
+    .behance-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .behance-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .behance-card .action-btn {
+        margin-top: 0;
     }
 
     .menu-toggle {
@@ -1322,6 +1451,18 @@ section {
     }
 
     .hero-title {
-        font-size: 2.8rem;
+        font-size: clamp(2rem, 12vw, 3.5rem);
+    }
+    
+    .behance-card .proj-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .behance-card .proj-index {
+        margin-bottom: 1rem;
+    }
+    
+    .behance-card .proj-index i {
+        font-size: 2rem;
     }
 }
