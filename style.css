@@ -53,6 +53,15 @@ h4,
     font-weight: 700;
 }
 
+/* =========================================================
+   smooth wrapper (Kill horizontal scroll)
+   ========================================================= */
+#smooth-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -301,6 +310,7 @@ section {
 .hero-top {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: clamp(2rem, 5vh, 4rem);
 }
 
 .hero-badge {
@@ -870,9 +880,9 @@ section {
 }
 
 .tool-circle:hover {
-    background: var(--accent);
+    background: var(--text-main);
     color: var(--bg-main);
-    border-color: var(--accent);
+    border-color: var(--text-main);
     transform: scale(1.05);
 }
 
@@ -1357,6 +1367,11 @@ section {
     .hero-content {
         flex: none;
     }
+    
+    .hero-title {
+        line-height: 1;
+        letter-spacing: -2px;
+    }
 
     .hero-bottom {
         flex-direction: column;
@@ -1394,6 +1409,30 @@ section {
 }
 
 @media (max-width: 768px) {
+    .section-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 10vw, 5.5rem);
+        line-height: 0.95;
+        letter-spacing: -2px;
+    }
+    
+    .hero-title .line-wrap {
+        display: block;
+        width: 100%;
+    }
+    
+    .hero-desc {
+        font-size: 1.15rem;
+        max-width: 85%;
+    }
+
+    .about-text {
+        font-size: 1.25rem;
+    }
+
     .nav-links {
         display: none;
     }
@@ -1426,7 +1465,8 @@ section {
     }
 
     .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
 
     .edu-item {
@@ -1440,6 +1480,15 @@ section {
 }
 
 @media (max-width: 480px) {
+    section {
+        padding: 15vw 0;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+
     .footer-flex {
         flex-direction: column;
         gap: 2rem;
@@ -1449,9 +1498,31 @@ section {
         width: 120px;
         height: 120px;
     }
+    
+    .hero-desc {
+        font-size: 1.05rem;
+        max-width: 100%;
+        line-height: 1.6;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
 
     .hero-title {
-        font-size: clamp(2rem, 12vw, 3.5rem);
+        font-size: clamp(1.8rem, 10vw, 4rem);
+        line-height: 0.95;
+        letter-spacing: -1px;
+        word-break: keep-all;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .hero-title .line-wrap {
+        margin-bottom: 0;
+        display: block;
+        width: 100%;
     }
     
     .behance-card .proj-info h3 {
@@ -1463,6 +1534,26 @@ section {
     }
     
     .behance-card .proj-index i {
+        font-size: 2rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .tool-circle {
+        width: clamp(120px, 35vw, 160px);
+        height: clamp(120px, 35vw, 160px);
+        font-size: 0.9rem;
+    }
+    
+    .mega-email {
+        font-size: clamp(1.5rem, 8vw, 2rem);
+        word-break: break-all;
+    }
+    
+    .marquee-content span {
         font-size: 2rem;
     }
 }
