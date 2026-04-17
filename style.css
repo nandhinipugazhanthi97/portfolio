@@ -861,32 +861,38 @@ section {
    TOOLKIT SECTION
    ========================================================= */
 .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .tool-circle {
-    width: clamp(120px, 15vw, 200px);
-    height: clamp(120px, 15vw, 200px);
+    width: auto;
+    height: auto;
+    padding: 1rem 2.5rem;
     border: 1px solid var(--border);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
-    background: transparent;
+    letter-spacing: 1px;
+    color: var(--text-main);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .tool-circle:hover {
-    background: var(--text-main);
+    background: var(--accent);
     color: var(--bg-main);
-    border-color: var(--text-main);
-    transform: scale(1.05);
+    border-color: var(--accent);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(212, 255, 0, 0.2);
 }
 
 /* =========================================================

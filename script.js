@@ -302,7 +302,28 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 
-    // 5.5 Stagger Tools Section with 3D Pop
+    // 5.5 Behance Cards Staggered Reveal
+    const behanceCards = document.querySelectorAll('.behance-card');
+    if (behanceCards.length > 0) {
+        behanceCards.forEach(card => card.classList.remove('gs-reveal'));
+        gsap.fromTo('.behance-card',
+            { opacity: 0, y: 80, rotationX: -10, scale: 0.95, transformPerspective: 1000 },
+            {
+                opacity: 1, y: 0, rotationX: 0, scale: 1,
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: '.behance-grid',
+                    start: "top 85%",
+                    end: "top 50%",
+                    scrub: 1.5
+                }
+            }
+        );
+    }
+
+    // 5.6 Stagger Tools Section with 3D Pop
     gsap.fromTo('.tool-circle',
         { scale: 0.5, opacity: 0, rotationY: 90, z: -200, transformPerspective: 800 },
         {
@@ -319,21 +340,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
 
-    // 5.6 Contact Section 3D Transform
+    // 5.6 Contact Section Premium Reveal
     const contactFormWrap = document.querySelector('.contact-form-wrap');
     if (contactFormWrap) {
         contactFormWrap.classList.remove('gs-reveal');
         gsap.fromTo(contactFormWrap,
-            { rotationY: -15, scale: 0.9, opacity: 0, x: 50, transformPerspective: 1000 },
+            { y: 80, opacity: 0, scale: 0.95 },
             {
-                rotationY: 0, scale: 1, opacity: 1, x: 0,
+                y: 0, opacity: 1, scale: 1,
                 duration: 1.5,
-                ease: "power3.out",
+                ease: "power4.out",
                 scrollTrigger: {
                     trigger: '.contact',
                     start: "top 85%",
                     end: "top 40%",
-                    scrub: 1
+                    scrub: 1.5
                 }
             }
         );
@@ -343,11 +364,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactInfo) {
         contactInfo.classList.remove('gs-reveal');
         gsap.fromTo(contactInfo,
-            { rotationY: 15, opacity: 0, x: -50, transformPerspective: 1000 },
+            { y: 80, opacity: 0, scale: 0.95 },
             {
-                rotationY: 0, opacity: 1, x: 0,
+                y: 0, opacity: 1, scale: 1,
                 duration: 1.5,
-                ease: "power3.out",
+                ease: "power4.out",
                 scrollTrigger: {
                     trigger: '.contact',
                     start: "top 85%",
