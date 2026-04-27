@@ -20,6 +20,58 @@
     --padding-x: 5vw;
 }
 
+body.light-theme {
+    --bg-main: #fcfcfc;
+    --text-main: #070707;
+    --text-muted: #555555;
+    --accent: #0044cc;
+    --accent-dark: #002288;
+    --border: rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .grid-pattern {
+    opacity: 0.2;
+}
+
+body.light-theme .behance-card:hover {
+    background: rgba(0, 68, 204, 0.03);
+}
+
+body.light-theme .hero-badge .dot {
+    animation: pulse-light 2s infinite;
+}
+
+@keyframes pulse-light {
+    0% { box-shadow: 0 0 0 0 rgba(0, 68, 204, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 68, 204, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 68, 204, 0); }
+}
+
+body.light-theme .cs-outcome {
+    background: rgba(0, 68, 204, 0.05);
+}
+
+body.light-theme .tool-circle:hover {
+    box-shadow: 0 10px 30px rgba(0, 68, 204, 0.2);
+}
+
+/* Fix Header and Cursor Visibility in Light Theme */
+body.light-theme .navbar {
+    mix-blend-mode: normal;
+    background: rgba(252, 252, 252, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+body.light-theme #cursor {
+    mix-blend-mode: normal;
+}
+
+body.light-theme #cursor.cursor-green {
+    background-color: #d4ff00 !important;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -213,6 +265,26 @@ section {
 
 .nav-links a:hover {
     color: var(--accent);
+}
+
+/* Theme Toggle */
+.theme-toggle-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+    font-size: 1.1rem;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--text-main);
+    color: var(--bg-main);
 }
 
 .menu-toggle {

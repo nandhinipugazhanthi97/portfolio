@@ -80,6 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 cursorText.innerText = '';
             });
         });
+
+        // Marquee section cursor color
+        const marqueeSection = document.querySelector('.marquee-section');
+        if (marqueeSection) {
+            marqueeSection.addEventListener('mouseenter', () => {
+                if (isDesktop) cursor.classList.add('cursor-green');
+            });
+            marqueeSection.addEventListener('mouseleave', () => {
+                if (isDesktop) cursor.classList.remove('cursor-green');
+            });
+        }
     }
 
     /* =========================================================
@@ -596,5 +607,40 @@ document.addEventListener('DOMContentLoaded', () => {
     initAccordion('quicktest-accordion', 'quicktest-panel', 'quicktest-toggle');
     initAccordion('quizzer-accordion', 'quizzer-panel', 'quizzer-toggle');
     initAccordion('coherence-accordion', 'coherence-panel', 'coherence-toggle');
+
+    /* =========================================================
+       11. THEME TOGGLE
+       ========================================================= */
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    
+    // Check local storage for theme
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    }
+    
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            
+            const isLight = document.body.classList.contains('light-theme');
+            localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            
+            if (themeIcon) {
+                if (isLight) {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                } else {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                }
+            }
+        });
+    }
 
 });
