@@ -1546,8 +1546,12 @@ section {
     }
 
     .tools-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
+    }
+
+    .tool-circle {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.95rem;
     }
 
     .edu-item {
@@ -1557,6 +1561,14 @@ section {
 
     .hover-image-reveal {
         display: none !important;
+    }
+
+    .toolkit {
+        padding-bottom: 5vw;
+    }
+
+    .contact {
+        padding-top: 5vw;
     }
 }
 
@@ -1619,14 +1631,14 @@ section {
     }
 
     .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 0.8rem;
     }
     
     .tool-circle {
-        width: clamp(120px, 35vw, 160px);
-        height: clamp(120px, 35vw, 160px);
-        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        width: auto;
+        height: auto;
     }
     
     .mega-email {
@@ -1636,5 +1648,13 @@ section {
     
     .marquee-content span {
         font-size: 2rem;
+    }
+
+    .toolkit {
+        padding-bottom: 8vw;
+    }
+
+    .contact {
+        padding-top: 8vw;
     }
 }
