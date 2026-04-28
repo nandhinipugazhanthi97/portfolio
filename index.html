@@ -22,6 +22,13 @@
 </head>
 
 <body>
+    <!-- Script to prevent FOUC (Flash of Unstyled Content) for Theme -->
+    <script>
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
 
     <!-- Custom Cursor -->
     <div id="cursor"></div>
@@ -1091,6 +1098,8 @@
                     <div class="tool-circle link-hover">Gemini</div>
                     <div class="tool-circle link-hover">HTML</div>
                     <div class="tool-circle link-hover">CSS</div>
+                    <div class="tool-circle link-hover">Stitch</div>
+                    <div class="tool-circle link-hover">Vibe Design</div>
                 </div>
             </div>
         </section>
