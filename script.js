@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Hover effects using data attributes
-        const hoverElements = document.querySelectorAll('.link-hover, a, button, input, textarea');
+        const hoverElements = document.querySelectorAll('.link-hover, a:not(.no-cursor), button, input, textarea');
 
         hoverElements.forEach(el => {
             el.addEventListener('mouseenter', (e) => {
